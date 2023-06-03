@@ -1,7 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body style="background-color: black">
-  </body>
+<head>
+  <title>Project List</title>
+  <style>
+    .project-thumbnail {
+      width: 200px;
+      height: auto;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Project List</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Thumbnail</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="project-list"></tbody>
+  </table>
+  <script src="projectFiller.js"></script>
+</body>
 </html>
