@@ -5,15 +5,21 @@ const API = "https://studio.code.org/v3/channels/"
     let project = null;
     (function orderedFetch(index) {
       let source = API + ids[index];
-      fetch(source)
+      fetch(source, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
+        }
+      })
       .then(response => {
         if(response.status < 206) {
           return(response.json())
         } 
       })
       .then(data => {
-       project = data;
-        console.log(project);
+        console.log(data);
         //orderedFetch(index++)
       })
       .catch(err => {
