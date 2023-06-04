@@ -12,12 +12,7 @@ projectTable.innerHtml = "";
         } 
       })
       .then(project => {
-      //var listItem = document.createElement("tr");
-      //var thumbnail = document.createElement("img");
-      //thumbnail.src = "https://studio.code.org" + project.thumbnailUrl;
-      //thumbnail.alt = project.name + " Thumbnail";
-      //thumbnail.className = "project-thumbnail";
-      if(project == undefined) {return}
+      //if(project == undefined) {return}
       projectTable.innerHTML += `
       <tr>
        <th>
@@ -30,24 +25,13 @@ projectTable.innerHtml = "";
         <p> ${project.updatedAt} <p>
        </th>
       `
-
-      //var projectTitle = document.createElement("h2");
-      //projectTitle.textContent = project.name;
-
-      //var projectDescription = document.createElement("p");
-      //projectDescription.textContent = project.updatedAt;
-
-      //listItem.appendChild(thumbnail);
-      //listItem.appendChild(projectTitle);
-      //listItem.appendChild(projectDescription);
-      //projectTable.appendChild(listItem);
       })
       .catch(err => {
         console.log(err);
       })
       .finally(() => {
         if(index < ids.length-1) {
-          orderedFetch(++index)
+          orderedFetch(index + 1)
         }
       })
     })(0)
