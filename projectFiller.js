@@ -10,8 +10,7 @@ const projectTable = document.querySelector("body > table");
           return(response.json())
         } 
       })
-      .then(data => {
-      var project = JSON.parse(data);
+      .then(project => {
       var listItem = document.createElement("li");
       var thumbnail = document.createElement("img");
       thumbnail.src = "https://studio.code.org" + project.thumbnailUrl;
