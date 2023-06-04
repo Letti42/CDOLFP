@@ -14,7 +14,7 @@ const projectTable = document.querySelector("body > table");
       var project = JSON.parse(data);
       var listItem = document.createElement("li");
       var thumbnail = document.createElement("img");
-      thumbnail.src = "https://studio.code.org" + project.thumbnailURL;
+      thumbnail.src = "https://studio.code.org" + project.thumbnailUrl;
       thumbnail.alt = project.name + " Thumbnail";
       thumbnail.className = "project-thumbnail";
 
