@@ -18,7 +18,7 @@ projectTable.innerHtml = "";
       //thumbnail.alt = project.name + " Thumbnail";
       //thumbnail.className = "project-thumbnail";
       if(project == undefined) {return}
-      projectTable.innerHtml += `
+      projectTable.innerHTML += `
       <tr>
        <th>
         <img class=project-thumbnail src=https://studio.code.org${project.thumbnailUrl} alt=${project.name}_Thumbnail></img>
