@@ -17,6 +17,7 @@ projectTable.innerHtml = "";
       //thumbnail.src = "https://studio.code.org" + project.thumbnailUrl;
       //thumbnail.alt = project.name + " Thumbnail";
       //thumbnail.className = "project-thumbnail";
+      if(project == undefined) {return}
       projectTable.innerHtml += `
       <tr>
        <th>
