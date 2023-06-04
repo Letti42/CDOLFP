@@ -16,7 +16,7 @@ const projectTable = document.querySelector("body > table");
       //thumbnail.src = "https://studio.code.org" + project.thumbnailUrl;
       //thumbnail.alt = project.name + " Thumbnail";
       //thumbnail.className = "project-thumbnail";
-      document.write(`
+      projectTable.innerHtml += `
       <tr>
        <th id=project-image>
         <img class=project-thumbnail src=https://studio.code.org${project.thumbnailUrl} alt=${project.name}_Thumbnail></img>
@@ -27,7 +27,7 @@ const projectTable = document.querySelector("body > table");
        <th id=project-update>
         <p> ${project.updatedAt} <p>
        </th>
-      `)
+      `
 
       //var projectTitle = document.createElement("h2");
       //projectTitle.textContent = project.name;
