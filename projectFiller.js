@@ -12,6 +12,7 @@ projectTable.innerHtml = "";
         } 
       })
       .then(project => {
+       console.log(`${index} : ${ids.length-1}`)
       //if(project == undefined) {return}
       projectTable.innerHTML += `
       <tr>
