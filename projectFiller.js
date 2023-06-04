@@ -21,7 +21,7 @@ projectTable.innerHtml = "";
         </a>
        </th>
        <th>
-        <a style="text-decoration: none" href=https://studio.code.org${project.level}/${source}>
+        <a href=https://studio.code.org${project.level}/${source}>
          <h2> ${project.name} </h2>
         </a>
        </th>
