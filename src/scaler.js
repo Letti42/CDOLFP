@@ -10,6 +10,6 @@ if(urlEmbed.includes("gamelab")) {
   embed.width = "392px";
   embed.height = "620px";
 }
-const scale = aspect / embed.width; // divide this by the height if you want the joypad
+const scale = aspect / embed.offsetWidth; // divide this by the height if you want the joypad
 embed.style["transform"] = `scale(${scale})`;
 embed.style["transform-origin"] = `top center`;
