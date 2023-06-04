@@ -19,13 +19,13 @@ projectTable.innerHtml = "";
       //thumbnail.className = "project-thumbnail";
       projectTable.innerHtml += `
       <tr>
-       <th id=project-image>
+       <th>
         <img class=project-thumbnail src=https://studio.code.org${project.thumbnailUrl} alt=${project.name}_Thumbnail></img>
        </th>
-       <th id=project-title>
+       <th>
         <h2> ${project.name} </h2>
        </th>
-       <th id=project-update>
+       <th>
         <p> ${project.updatedAt} <p>
        </th>
       `
