@@ -11,7 +11,7 @@ const projectTable = document.querySelector("body > table");
         } 
       })
       .then(project => {
-      var listItem = document.createElement("li");
+      var listItem = document.createElement("tr");
       var thumbnail = document.createElement("img");
       thumbnail.src = "https://studio.code.org" + project.thumbnailUrl;
       thumbnail.alt = project.name + " Thumbnail";
