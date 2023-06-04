@@ -4,8 +4,8 @@ const projectTable = document.querySelector("#projectList");
 projectTable.innerHtml = "";
     // Loop through the projects array and create table rows with thumbnails
     (function orderedFetch(index) {
-      let source = API + ids[index];
-      fetch(source)
+      let source = ids[index];
+      fetch(API + source)
       .then(response => {
         if(response.status < 206) {
           return(response.json())
@@ -16,10 +16,14 @@ projectTable.innerHtml = "";
       projectTable.innerHTML += `
       <tr>
        <th>
-        <img class=project-thumbnail src=https://studio.code.org${project.thumbnailUrl} alt=${project.name}_Thumbnail></img>
+        <a href=https://studio.code.org${project.level}/${source}>
+         <img class=project-thumbnail src=https://studio.code.org${project.thumbnailUrl} alt=${project.name}_Thumbnail></img>
+        </a>
        </th>
        <th>
-        <h2> ${project.name} </h2>
+        <a style="text-decoration: none" href=https://studio.code.org${project.level}/${source}>
+         <h2> ${project.name} </h2>
+        </a>
        </th>
        <th>
         <p> ${project.updatedAt} <p>
