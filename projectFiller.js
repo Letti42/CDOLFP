@@ -11,22 +11,34 @@ const projectTable = document.querySelector("body > table");
         } 
       })
       .then(project => {
-      var listItem = document.createElement("tr");
-      var thumbnail = document.createElement("img");
-      thumbnail.src = "https://studio.code.org" + project.thumbnailUrl;
-      thumbnail.alt = project.name + " Thumbnail";
-      thumbnail.className = "project-thumbnail";
+      //var listItem = document.createElement("tr");
+      //var thumbnail = document.createElement("img");
+      //thumbnail.src = "https://studio.code.org" + project.thumbnailUrl;
+      //thumbnail.alt = project.name + " Thumbnail";
+      //thumbnail.className = "project-thumbnail";
+      document.write(`
+      <tr>
+       <th id=project-image>
+        <img class=project-thumbnail src=https://studio.code.org${project.thumbnailUrl} alt=${project.name}_Thumbnail></img>
+       </th>
+       <th id=project-title>
+        <h2> ${project.name} </h2>
+       </th>
+       <th id=project-update>
+        <p> ${project.updatedAt} <p>
+       </th>
+      `)
 
-      var projectTitle = document.createElement("h2");
-      projectTitle.textContent = project.name;
+      //var projectTitle = document.createElement("h2");
+      //projectTitle.textContent = project.name;
 
-      var projectDescription = document.createElement("p");
-      projectDescription.textContent = project.updatedAt;
+      //var projectDescription = document.createElement("p");
+      //projectDescription.textContent = project.updatedAt;
 
-      listItem.appendChild(thumbnail);
-      listItem.appendChild(projectTitle);
-      listItem.appendChild(projectDescription);
-      projectTable.appendChild(listItem);
+      //listItem.appendChild(thumbnail);
+      //listItem.appendChild(projectTitle);
+      //listItem.appendChild(projectDescription);
+      //projectTable.appendChild(listItem);
       })
       .catch(err => {
         console.log(err);
