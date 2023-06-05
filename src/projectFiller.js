@@ -44,7 +44,7 @@ projectTable.innerHtml = "";
 
 
 function filterProjects(e){
-    let filter = e.innerText.toLowerCase().replace(/\s/g, "") || e.parentElement.innerText.toLowerCase().replace(/\s/g, "");
+    let filter = e.srcElement.innerText.toLowerCase().replace(/\s/g, "") || e.srcElement.parentElement.innerText.toLowerCase().replace(/\s/g, "");
     let pjs = Array.from(document.querySelector("#projectList").children);
     let pjdata = Array();
     let filteredProjects = Array();
