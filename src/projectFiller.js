@@ -13,7 +13,7 @@ projectTable.innerHtml = "";
       })
       .then(project => {
       if(project == undefined) {return}
-      let date = project.updatedAt;
+      let date = new Date(project.updatedAt);
       const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
       projectTable.innerHTML += `
       <tr>
